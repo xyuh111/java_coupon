@@ -1,4 +1,4 @@
-package com.web3n.passbook.merchants;
+package com.web3n.passbook;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,5 +9,4 @@ public class MerchantsApplication {
     public static void main(String[] args) {
         SpringApplication.run(MerchantsApplication.class, args);
     }
-
 }

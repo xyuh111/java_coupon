@@ -58,11 +58,11 @@
             <version>2.0.5.RELEASE</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.yaml</groupId>
-            <artifactId>snakeyaml</artifactId>
-            <version>1.10</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.yaml</groupId>-->
+<!--            <artifactId>snakeyaml</artifactId>-->
+<!--            <version>1.10</version>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -86,11 +86,11 @@
             <artifactId>spring-boot-autoconfigure</artifactId>
         </dependency>
         <!-- kafka 需要对应本地的版本-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.kafka</groupId>-->
-<!--            <artifactId>spring-kafka</artifactId>-->
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
 <!--            <version>1.1.1.RELEASE</version>-->
-<!--        </dependency>-->
+        </dependency>
         <!-- 工具类 -->
         <dependency>
             <groupId>commons-lang</groupId>
