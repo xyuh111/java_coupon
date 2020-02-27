@@ -3,6 +3,8 @@ package com.web3n.passbook.dao;
 import com.web3n.passbook.entity.Merchants;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.Optional;
+
 /**
  * Merchants Dao 接口
  * Created by macro on MerchantsDao.
@@ -14,12 +16,12 @@ public interface MerchantsDao extends JpaRepository<Merchants, Integer> {
      * @param id
      * @return {@link Merchants}
      */
-    Merchants findById(Integer id);
+     Optional<Merchants> findById(Integer id);
 
     /**
      * 根据商户名称获取商户对象
      * @param name
      * @return {@link Merchants}
      */
-    Merchants findName(String name);
+    Merchants findByName(String name);
 }
