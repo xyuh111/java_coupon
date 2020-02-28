@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: Web3nMerchants
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/passbook?autoReconnect=true
+    username: root
+    password: 123456
+  kafka:
+    bootstrap-servers: 127.0.0.1:32772
+    consumer:
+      group-id: passbook
+    listener:
+      concurrency: 4
+
+server:
+  port: 9090
+
+# 日志
+logging:
+  # 输出级别
+  level:
+    root: info
+    org:
+      springframework:
+        boot:
+          autoconfigure:
+            logging=INFO:
+  # 指定路径
+  file:
+    # 最大保存天数
+    max-history: 30
+    # 每个文件最大大小
+    max-size: 200MB
+    path: logs/web3nMerchants.log
+

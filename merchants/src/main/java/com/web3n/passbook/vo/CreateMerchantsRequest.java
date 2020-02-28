@@ -36,7 +36,7 @@ public class CreateMerchantsRequest {
      * @return {@link ErrorCode}
      */
     public ErrorCode validate(MerchantsDao merchantsDao){
-        if(null == merchantsDao.findByName(name)){
+        if(null != merchantsDao.findByName(name)){
             return ErrorCode.DUPLICATE_NAME;
         };
         if(null == this.logoUrl){

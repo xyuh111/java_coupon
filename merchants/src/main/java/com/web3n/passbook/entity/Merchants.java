@@ -3,7 +3,6 @@ package com.web3n.passbook.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 
 /**
@@ -18,7 +17,8 @@ import javax.persistence.*;
 public class Merchants {
     /** 商户id，主键 */
     @Id  /** 主键 */
-    @GeneratedValue /** 自动生成值，插入数据时不用配置 id 属性，保存到数据库会自动生成*/
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @GeneratedValue /** 自动生成值，插入数据时不用配置 id 属性，保存到数据库会自动生成*/
     @Column(name="id", nullable = false) /** 列的属性 nullable false = not noll  */
     private Integer id;
 

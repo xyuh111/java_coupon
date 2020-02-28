@@ -1,13 +1,17 @@
 package com.web3n.passbook.merchants;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import com.web3n.passbook.MerchantsApplication;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootTest
+/**
+ * 测试用例入口
+ * */
+@SpringBootApplication
+@ComponentScan("com.web3n")
 class MerchantsApplicationTests {
-
-    @Test
-    void contextLoads() {
+    public static void main(String[] args) {
+        SpringApplication.run(MerchantsApplication.class, args);
     }
-
 }
