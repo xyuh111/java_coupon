@@ -4,6 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * 通用的响应对象
  * Created by macro on Response.
@@ -19,8 +22,7 @@ public class Response {
     private String errorMas = "";
 
     /** 返回值对象 */
-    private Object data;
-
+    private Object data = new HashMap<String, Object>();
     /**
      * 正确的响应构造函数
      * @param data  返回值对象

@@ -5,6 +5,7 @@ import com.web3n.passbook.service.IMerchantsService;
 import com.web3n.passbook.vo.CreateMerchantsRequest;
 
 
+import com.web3n.passbook.vo.Response;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -28,7 +29,7 @@ public class MerchantsServiceTest{
      * {"data":{"id":20},"errorCode":0,"errorMas":""}
      */
     @Test
-    @Transactional /** 添加事务 测试成功后，自动实现数据回滚，数据库的数据不会发生变化 */
+//    @Transactional /** 添加事务 测试成功后，自动实现数据回滚，数据库的数据不会发生变化 */
     public void testCreatMerchantService(){
         CreateMerchantsRequest request = new CreateMerchantsRequest();
         request.setName("张斌3");
@@ -37,6 +38,14 @@ public class MerchantsServiceTest{
         request.setBusinessLicenseUrl("http://blog.web3n.com");
         request.setAddress("深圳");
         System.out.println(JSON.toJSONString(merchantsService.createMerchants(request)));
+    }
+
+    /**
+     * {"data":{"address":"??","businessLicenseUrl":"http://blog.web3n.com","id":22,"isAudit":false,"logoUrl":"https://avatars1.githubusercontent.com/u/30693351?v=4","name":"??3","phone":"123456789"},"errorCode":0,"errorMas":""}
+     */
+    @Test
+    public void testBuildMerchantsInfoById(){
+        System.out.println(JSON.toJSONString(merchantsService.buildMerchantsInfoById(22)));
     }
 }
 

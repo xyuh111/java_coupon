@@ -15,6 +15,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Optional;
+
 /**
  * 商户服务接口实现
  * Created by macro on MerchantsServiceImpl.
@@ -49,7 +51,16 @@ public class MerchantsServiceImpl implements IMerchantsService {
 
     @Override
     public Response buildMerchantsInfoById(Integer id) {
-        return null;
+        Response response = new Response();
+        Optional<Merchants> merchants = merchantsDao.findById(id);
+        System.out.println(merchants.isPresent());
+        if(false == merchants.isPresent()) {
+            response.setErrorCode(ErrorCode.MERCHANTS_NOT_EXIST.getCode());
+            response.setErrorMas(ErrorCode.MERCHANTS_NOT_EXIST.getDesc());
+            return response;
+        }
+        response.setData(merchants.get());
+        return response;
     }
 
     @Override

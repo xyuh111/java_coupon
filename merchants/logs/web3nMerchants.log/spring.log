@@ -678,3 +678,165 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'passbook.hiber
 2020-02-28 10:35:39.936  INFO 49248 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2020-02-28 10:35:39.940  INFO 49248 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2020-02-28 10:35:39.943  INFO 49248 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-02-28 10:44:03.713  INFO 5324 --- [main] c.w.p.m.service.MerchantsServiceTest     : Starting MerchantsServiceTest on DESKTOP-E3BV8JT with PID 5324 (started by root in D:\user\java_coupon\merchants)
+2020-02-28 10:44:03.714  INFO 5324 --- [main] c.w.p.m.service.MerchantsServiceTest     : No active profile set, falling back to default profiles: default
+2020-02-28 10:44:04.281  INFO 5324 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-28 10:44:04.380  INFO 5324 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 89ms. Found 1 JPA repository interfaces.
+2020-02-28 10:44:04.897  INFO 5324 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-28 10:44:05.108  INFO 5324 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-28 10:44:05.182  INFO 5324 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-02-28 10:44:05.284  INFO 5324 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.10.Final}
+2020-02-28 10:44:05.492  INFO 5324 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-28 10:44:06.059  INFO 5324 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2020-02-28 10:44:06.773  INFO 5324 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-28 10:44:06.784  INFO 5324 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-28 10:44:07.547  INFO 5324 --- [main] c.w.p.m.service.MerchantsServiceTest     : Started MerchantsServiceTest in 4.323 seconds (JVM running for 5.349)
+2020-02-28 10:44:07.693  INFO 5324 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-28 10:44:07.696  INFO 5324 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-02-28 10:44:07.699  INFO 5324 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-02-28 10:46:33.352  INFO 53888 --- [main] c.w.p.m.service.MerchantsServiceTest     : Starting MerchantsServiceTest on DESKTOP-E3BV8JT with PID 53888 (started by root in D:\user\java_coupon\merchants)
+2020-02-28 10:46:33.353  INFO 53888 --- [main] c.w.p.m.service.MerchantsServiceTest     : No active profile set, falling back to default profiles: default
+2020-02-28 10:46:33.946  INFO 53888 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-28 10:46:34.050  INFO 53888 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92ms. Found 1 JPA repository interfaces.
+2020-02-28 10:46:34.632  INFO 53888 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-28 10:46:34.863  INFO 53888 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-28 10:46:34.937  INFO 53888 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-02-28 10:46:35.047  INFO 53888 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.10.Final}
+2020-02-28 10:46:35.263  INFO 53888 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-28 10:46:35.810  INFO 53888 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2020-02-28 10:46:36.531  INFO 53888 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-28 10:46:36.542  INFO 53888 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-28 10:46:37.351  INFO 53888 --- [main] c.w.p.m.service.MerchantsServiceTest     : Started MerchantsServiceTest in 4.475 seconds (JVM running for 5.547)
+2020-02-28 10:46:37.489  INFO 53888 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-28 10:46:37.492  INFO 53888 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-02-28 10:46:37.496  INFO 53888 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-02-28 10:46:48.785  INFO 40632 --- [main] c.w.p.m.service.MerchantsServiceTest     : Starting MerchantsServiceTest on DESKTOP-E3BV8JT with PID 40632 (started by root in D:\user\java_coupon\merchants)
+2020-02-28 10:46:48.786  INFO 40632 --- [main] c.w.p.m.service.MerchantsServiceTest     : No active profile set, falling back to default profiles: default
+2020-02-28 10:46:49.354  INFO 40632 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-28 10:46:49.450  INFO 40632 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85ms. Found 1 JPA repository interfaces.
+2020-02-28 10:46:49.975  INFO 40632 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-28 10:46:50.187  INFO 40632 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-28 10:46:50.263  INFO 40632 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-02-28 10:46:50.362  INFO 40632 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.10.Final}
+2020-02-28 10:46:50.565  INFO 40632 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-28 10:46:51.105  INFO 40632 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2020-02-28 10:46:51.819  INFO 40632 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-28 10:46:51.829  INFO 40632 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-28 10:46:52.637  INFO 40632 --- [main] c.w.p.m.service.MerchantsServiceTest     : Started MerchantsServiceTest in 4.368 seconds (JVM running for 5.465)
+2020-02-28 10:46:52.659  INFO 40632 --- [main] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@3c46e67a testClass = MerchantsServiceTest, testInstance = com.web3n.passbook.merchants.service.MerchantsServiceTest@217ed35e, testMethod = testCreatMerchantService@MerchantsServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@c730b35 testClass = MerchantsServiceTest, locations = '{}', classes = '{class com.web3n.passbook.merchants.MerchantsApplicationTests}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4eb7f003, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@1060b431, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@32eebfca, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@401e7803], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@626b639e]; rollback [true]
+2020-02-28 10:46:53.046  INFO 40632 --- [main] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@3c46e67a testClass = MerchantsServiceTest, testInstance = com.web3n.passbook.merchants.service.MerchantsServiceTest@217ed35e, testMethod = testCreatMerchantService@MerchantsServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@c730b35 testClass = MerchantsServiceTest, locations = '{}', classes = '{class com.web3n.passbook.merchants.MerchantsApplicationTests}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4eb7f003, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@1060b431, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@32eebfca, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@401e7803], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]
+2020-02-28 10:46:53.053  INFO 40632 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-28 10:46:53.055  INFO 40632 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-02-28 10:46:53.059  INFO 40632 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-02-28 10:47:01.292  INFO 8920 --- [main] c.w.p.m.service.MerchantsServiceTest     : Starting MerchantsServiceTest on DESKTOP-E3BV8JT with PID 8920 (started by root in D:\user\java_coupon\merchants)
+2020-02-28 10:47:01.293  INFO 8920 --- [main] c.w.p.m.service.MerchantsServiceTest     : No active profile set, falling back to default profiles: default
+2020-02-28 10:47:01.872  INFO 8920 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-28 10:47:01.969  INFO 8920 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86ms. Found 1 JPA repository interfaces.
+2020-02-28 10:47:02.498  INFO 8920 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-28 10:47:02.714  INFO 8920 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-28 10:47:02.788  INFO 8920 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-02-28 10:47:02.893  INFO 8920 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.10.Final}
+2020-02-28 10:47:03.094  INFO 8920 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-28 10:47:03.682  INFO 8920 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2020-02-28 10:47:04.401  INFO 8920 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-28 10:47:04.411  INFO 8920 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-28 10:47:05.191  INFO 8920 --- [main] c.w.p.m.service.MerchantsServiceTest     : Started MerchantsServiceTest in 4.422 seconds (JVM running for 5.507)
+2020-02-28 10:47:05.591  INFO 8920 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-28 10:47:05.593  INFO 8920 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-02-28 10:47:05.596  INFO 8920 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-02-28 10:47:29.204  INFO 41412 --- [main] c.w.p.m.service.MerchantsServiceTest     : Starting MerchantsServiceTest on DESKTOP-E3BV8JT with PID 41412 (started by root in D:\user\java_coupon\merchants)
+2020-02-28 10:47:29.205  INFO 41412 --- [main] c.w.p.m.service.MerchantsServiceTest     : No active profile set, falling back to default profiles: default
+2020-02-28 10:47:29.801  INFO 41412 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-28 10:47:29.896  INFO 41412 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84ms. Found 1 JPA repository interfaces.
+2020-02-28 10:47:30.418  INFO 41412 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-28 10:47:30.624  INFO 41412 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-28 10:47:30.697  INFO 41412 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-02-28 10:47:30.795  INFO 41412 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.10.Final}
+2020-02-28 10:47:30.994  INFO 41412 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-28 10:47:31.548  INFO 41412 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2020-02-28 10:47:32.270  INFO 41412 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-28 10:47:32.280  INFO 41412 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-28 10:47:33.072  INFO 41412 --- [main] c.w.p.m.service.MerchantsServiceTest     : Started MerchantsServiceTest in 4.311 seconds (JVM running for 5.389)
+2020-02-28 10:47:33.219  INFO 41412 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-28 10:47:33.223  INFO 41412 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-02-28 10:47:33.226  INFO 41412 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-02-28 10:57:16.484  INFO 7412 --- [main] c.w.p.m.service.MerchantsServiceTest     : Starting MerchantsServiceTest on DESKTOP-E3BV8JT with PID 7412 (started by root in D:\user\java_coupon\merchants)
+2020-02-28 10:57:16.485  INFO 7412 --- [main] c.w.p.m.service.MerchantsServiceTest     : No active profile set, falling back to default profiles: default
+2020-02-28 10:57:17.290  INFO 7412 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-28 10:57:17.394  INFO 7412 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92ms. Found 1 JPA repository interfaces.
+2020-02-28 10:57:17.949  INFO 7412 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-28 10:57:18.170  INFO 7412 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-28 10:57:18.242  INFO 7412 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-02-28 10:57:18.360  INFO 7412 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.10.Final}
+2020-02-28 10:57:18.566  INFO 7412 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-28 10:57:19.107  INFO 7412 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2020-02-28 10:57:19.848  INFO 7412 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-28 10:57:19.857  INFO 7412 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-28 10:57:20.703  INFO 7412 --- [main] c.w.p.m.service.MerchantsServiceTest     : Started MerchantsServiceTest in 4.681 seconds (JVM running for 5.75)
+2020-02-28 10:57:20.872  INFO 7412 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-28 10:57:20.876  INFO 7412 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-02-28 10:57:20.881  INFO 7412 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-02-28 10:57:48.333  INFO 25644 --- [main] c.w.p.m.service.MerchantsServiceTest     : Starting MerchantsServiceTest on DESKTOP-E3BV8JT with PID 25644 (started by root in D:\user\java_coupon\merchants)
+2020-02-28 10:57:48.334  INFO 25644 --- [main] c.w.p.m.service.MerchantsServiceTest     : No active profile set, falling back to default profiles: default
+2020-02-28 10:57:49.089  INFO 25644 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-28 10:57:49.222  INFO 25644 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 118ms. Found 1 JPA repository interfaces.
+2020-02-28 10:57:49.851  INFO 25644 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-28 10:57:50.080  INFO 25644 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-28 10:57:50.164  INFO 25644 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-02-28 10:57:50.274  INFO 25644 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.10.Final}
+2020-02-28 10:57:50.506  INFO 25644 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-28 10:57:51.100  INFO 25644 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2020-02-28 10:57:51.915  INFO 25644 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-28 10:57:51.926  INFO 25644 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-28 10:57:52.835  INFO 25644 --- [main] c.w.p.m.service.MerchantsServiceTest     : Started MerchantsServiceTest in 5.025 seconds (JVM running for 6.172)
+2020-02-28 10:57:53.000  INFO 25644 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-28 10:57:53.003  INFO 25644 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-02-28 10:57:53.008  INFO 25644 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-02-28 10:59:09.423  INFO 48672 --- [main] c.w.p.m.service.MerchantsServiceTest     : Starting MerchantsServiceTest on DESKTOP-E3BV8JT with PID 48672 (started by root in D:\user\java_coupon\merchants)
+2020-02-28 10:59:09.426  INFO 48672 --- [main] c.w.p.m.service.MerchantsServiceTest     : No active profile set, falling back to default profiles: default
+2020-02-28 10:59:10.109  INFO 48672 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-28 10:59:10.220  INFO 48672 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100ms. Found 1 JPA repository interfaces.
+2020-02-28 10:59:10.851  INFO 48672 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-28 10:59:11.095  INFO 48672 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-28 10:59:11.176  INFO 48672 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-02-28 10:59:11.296  INFO 48672 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.10.Final}
+2020-02-28 10:59:11.529  INFO 48672 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-28 10:59:12.117  INFO 48672 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2020-02-28 10:59:12.921  INFO 48672 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-28 10:59:12.933  INFO 48672 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-28 10:59:13.864  INFO 48672 --- [main] c.w.p.m.service.MerchantsServiceTest     : Started MerchantsServiceTest in 4.977 seconds (JVM running for 6.134)
+2020-02-28 10:59:14.122  INFO 48672 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-28 10:59:14.126  INFO 48672 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-02-28 10:59:14.130  INFO 48672 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-02-28 10:59:36.098  INFO 38852 --- [main] c.w.p.m.service.MerchantsServiceTest     : Starting MerchantsServiceTest on DESKTOP-E3BV8JT with PID 38852 (started by root in D:\user\java_coupon\merchants)
+2020-02-28 10:59:36.103  INFO 38852 --- [main] c.w.p.m.service.MerchantsServiceTest     : No active profile set, falling back to default profiles: default
+2020-02-28 10:59:36.835  INFO 38852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-28 10:59:36.945  INFO 38852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98ms. Found 1 JPA repository interfaces.
+2020-02-28 10:59:37.545  INFO 38852 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-28 10:59:37.777  INFO 38852 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-28 10:59:37.857  INFO 38852 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-02-28 10:59:37.972  INFO 38852 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.10.Final}
+2020-02-28 10:59:38.222  INFO 38852 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-28 10:59:38.846  INFO 38852 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2020-02-28 10:59:39.662  INFO 38852 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-28 10:59:39.673  INFO 38852 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-28 10:59:40.604  INFO 38852 --- [main] c.w.p.m.service.MerchantsServiceTest     : Started MerchantsServiceTest in 5.087 seconds (JVM running for 6.347)
+2020-02-28 10:59:40.884  INFO 38852 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-28 10:59:40.890  INFO 38852 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-02-28 10:59:40.893  INFO 38852 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-02-28 11:02:49.849  INFO 50164 --- [main] c.w.p.m.service.MerchantsServiceTest     : Starting MerchantsServiceTest on DESKTOP-E3BV8JT with PID 50164 (started by root in D:\user\java_coupon\merchants)
+2020-02-28 11:02:49.850  INFO 50164 --- [main] c.w.p.m.service.MerchantsServiceTest     : No active profile set, falling back to default profiles: default
+2020-02-28 11:02:50.516  INFO 50164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-28 11:02:50.625  INFO 50164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94ms. Found 1 JPA repository interfaces.
+2020-02-28 11:02:51.191  INFO 50164 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-28 11:02:51.409  INFO 50164 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-28 11:02:51.498  INFO 50164 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-02-28 11:02:51.611  INFO 50164 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.10.Final}
+2020-02-28 11:02:51.825  INFO 50164 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-28 11:02:52.391  INFO 50164 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2020-02-28 11:02:53.163  INFO 50164 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-28 11:02:53.175  INFO 50164 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-28 11:02:54.014  INFO 50164 --- [main] c.w.p.m.service.MerchantsServiceTest     : Started MerchantsServiceTest in 4.664 seconds (JVM running for 5.823)
+2020-02-28 11:02:54.285  INFO 50164 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-28 11:02:54.290  INFO 50164 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-02-28 11:02:54.294  INFO 50164 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
