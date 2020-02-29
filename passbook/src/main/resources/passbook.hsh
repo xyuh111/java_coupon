@@ -1,0 +1,11 @@
+create_namespace "pb"
+# VERSIONS 默认是 3， 可以不写。TTL 生成时间。 2147483647 为最大时间，永不过期。BLOOMFILTER 过滤器以行间（ROM 可选）为单位
+# 用于节省空间，可以修改 VERSIONS 个数
+# 用户表
+create "pb:user", {NAME => 'b', VERSION => '3', TTL => '2147483647', 'BLOOMFILTER' => 'ROM'},{NAME => 'o', VERSION => '3', TTL => '2147483647', 'BLOOMFILTER' => 'ROM'}
+# 优惠劵表
+create "pb:pass", {NAME => 'i', VERSION => '3', TTL => '2147483647', 'BLOOMFILTER' => 'ROM'}
+# 优惠劵模板
+create 'pb:patemplate', {NAME => 'b', VERSION => '3', TTL => '2147483647', 'BLOOMFILTER' => 'ROM'}, {NAME => 'c', VERSION => '3', TTL => '2147483647', 'BLOOMFILTER' => 'ROM'}
+# 用户反馈信息表，评论可以每次都替换，不需要多个版本，VERSION 可以设置为 1
+create 'pb:feedback', {NAME => 'i', VERSION => '3', TTL => '2147483647', 'BLOOMFILTER' => 'ROM'}

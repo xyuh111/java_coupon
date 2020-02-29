@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: web3n-Passbook
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/passbook?autoReconnect=true
+    username: root
+    password: 123456
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092 # 如果是多个 kafka 需要一列
+    consumer: # 消费方 、 producer 发送方
+      group-id: passbook # 消费者组
+    listener:
+      concurrency: 4 # 包含 4 个消费者
+  data:
+    hbash:
+      quorum: 127.0.0.1:2181
+      rootDir: file:///user/xieyuhui/root_dir # 数据存储目录
+      nodeParent: /hbase
+  redis:
+    host: 127.0.0.1
+    port: 6379
+server:
+  port: 9595
+logging:
+  level: debug
+  # 指定路径
+  file:
+    # 最大保存天数
+    max-history: 30
+    # 每个文件最大大小
+    max-size: 200MB
+    path: logs/web3n-passbook.log
