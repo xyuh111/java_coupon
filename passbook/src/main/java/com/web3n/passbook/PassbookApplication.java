@@ -1,4 +1,4 @@
-package com.web3n.passbook.passbook;
+package com.web3n.passbook;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
