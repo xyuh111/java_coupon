@@ -40,6 +40,9 @@ public class PassTemplate {
     /** 优惠劵结束时间 */
     private Date end;
 
+    /** 优惠劵最大发行数量 */
+    private Long Limit;
+
     /**
      * 校验优惠劵的有效性
      * @param merchantsDao

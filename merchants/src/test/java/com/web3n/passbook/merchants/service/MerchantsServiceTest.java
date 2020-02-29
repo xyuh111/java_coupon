@@ -5,7 +5,9 @@ import com.web3n.passbook.service.IMerchantsService;
 import com.web3n.passbook.vo.CreateMerchantsRequest;
 
 
+import com.web3n.passbook.vo.PassTemplate;
 import com.web3n.passbook.vo.Response;
+import org.apache.commons.lang.time.DateUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,6 +15,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.Date;
 
 /**
  * Created by macro on MerchantsServiceTest.
@@ -46,6 +49,20 @@ public class MerchantsServiceTest{
     @Test
     public void testBuildMerchantsInfoById(){
         System.out.println(JSON.toJSONString(merchantsService.buildMerchantsInfoById(22)));
+    }
+
+    @Test
+    public void  testDropPassTemplate(){
+        PassTemplate passTemplate = new PassTemplate();
+        passTemplate.setId(22);
+        passTemplate.setTitle("title：优惠劵");
+        passTemplate.setSummary("简介：11111");
+        passTemplate.setDesc("详情：22222");
+        passTemplate.setLimit(10000L);
+        passTemplate.setBackground(2);
+        passTemplate.setStart(new Date());
+        passTemplate.setEnd(DateUtils.addDays(new Date(), 30));
+        System.out.println(JSON.toJSONString(merchantsService.dropPassTemplate(passTemplate)));
     }
 }
 
