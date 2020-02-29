@@ -3493,3 +3493,125 @@ org.apache.kafka.common.errors.TimeoutException: Expiring 3 record(s) for mercha
 2020-02-29 13:52:09.843  WARN 13612 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (/192.168.1.42:9092) could not be established. Broker may not be available.
 2020-02-29 13:52:12.789  WARN 13612 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (/192.168.1.42:9092) could not be established. Broker may not be available.
 2020-02-29 13:52:15.907  WARN 13612 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (/192.168.1.42:9092) could not be established. Broker may not be available.
+2020-02-29 14:10:41.837  INFO 27524 --- [main] c.w.p.m.service.MerchantsServiceTest     : Starting MerchantsServiceTest on DESKTOP-E3BV8JT with PID 27524 (started by root in D:\user\java_coupon\merchants)
+2020-02-29 14:10:41.846  INFO 27524 --- [main] c.w.p.m.service.MerchantsServiceTest     : No active profile set, falling back to default profiles: default
+2020-02-29 14:10:42.723  INFO 27524 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-29 14:10:42.863  INFO 27524 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 122ms. Found 1 JPA repository interfaces.
+2020-02-29 14:10:43.550  INFO 27524 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-29 14:10:43.908  INFO 27524 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-29 14:10:44.024  INFO 27524 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-02-29 14:10:44.191  INFO 27524 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.10.Final}
+2020-02-29 14:10:44.480  INFO 27524 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-29 14:10:45.804  INFO 27524 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2020-02-29 14:10:48.875  INFO 27524 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-29 14:10:48.892  INFO 27524 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-29 14:10:51.241  INFO 27524 --- [main] c.w.p.m.service.MerchantsServiceTest     : Started MerchantsServiceTest in 10.184 seconds (JVM running for 11.745)
+2020-02-29 14:10:51.265  INFO 27524 --- [main] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@408d971b testClass = MerchantsServiceTest, testInstance = com.web3n.passbook.merchants.service.MerchantsServiceTest@139982de, testMethod = testCreatMerchantService@MerchantsServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6c6cb480 testClass = MerchantsServiceTest, locations = '{}', classes = '{class com.web3n.passbook.merchants.MerchantsApplicationTests}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6121c9d6, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@eafc191, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@23fe1d71, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@150c158], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@4f114b]; rollback [true]
+2020-02-29 14:10:52.101  INFO 27524 --- [main] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@408d971b testClass = MerchantsServiceTest, testInstance = com.web3n.passbook.merchants.service.MerchantsServiceTest@139982de, testMethod = testCreatMerchantService@MerchantsServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6c6cb480 testClass = MerchantsServiceTest, locations = '{}', classes = '{class com.web3n.passbook.merchants.MerchantsApplicationTests}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6121c9d6, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@eafc191, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@23fe1d71, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@150c158], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]
+2020-02-29 14:10:52.110  INFO 27524 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-29 14:10:52.113  INFO 27524 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-02-29 14:10:52.123  INFO 27524 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-02-29 14:22:52.892  INFO 11836 --- [main] c.w.p.m.service.MerchantsServiceTest     : Starting MerchantsServiceTest on DESKTOP-E3BV8JT with PID 11836 (started by root in D:\user\java_coupon\merchants)
+2020-02-29 14:22:52.920  INFO 11836 --- [main] c.w.p.m.service.MerchantsServiceTest     : No active profile set, falling back to default profiles: default
+2020-02-29 14:22:53.672  INFO 11836 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-29 14:22:53.833  INFO 11836 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 137ms. Found 1 JPA repository interfaces.
+2020-02-29 14:22:54.671  INFO 11836 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-29 14:22:54.926  INFO 11836 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-29 14:22:55.015  INFO 11836 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-02-29 14:22:55.162  INFO 11836 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.10.Final}
+2020-02-29 14:22:55.629  INFO 11836 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-29 14:22:56.363  INFO 11836 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2020-02-29 14:22:57.474  INFO 11836 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-29 14:22:57.487  INFO 11836 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-29 14:22:58.904  INFO 11836 --- [main] c.w.p.m.service.MerchantsServiceTest     : Started MerchantsServiceTest in 6.743 seconds (JVM running for 8.218)
+2020-02-29 14:22:58.934  INFO 11836 --- [main] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@408d971b testClass = MerchantsServiceTest, testInstance = com.web3n.passbook.merchants.service.MerchantsServiceTest@139982de, testMethod = testCreatMerchantService@MerchantsServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6c6cb480 testClass = MerchantsServiceTest, locations = '{}', classes = '{class com.web3n.passbook.merchants.MerchantsApplicationTests}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6121c9d6, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@eafc191, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@23fe1d71, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@150c158], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@57186526]; rollback [true]
+2020-02-29 14:22:59.490  INFO 11836 --- [main] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@408d971b testClass = MerchantsServiceTest, testInstance = com.web3n.passbook.merchants.service.MerchantsServiceTest@139982de, testMethod = testCreatMerchantService@MerchantsServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6c6cb480 testClass = MerchantsServiceTest, locations = '{}', classes = '{class com.web3n.passbook.merchants.MerchantsApplicationTests}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6121c9d6, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@eafc191, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@23fe1d71, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@150c158], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]
+2020-02-29 14:22:59.500  INFO 11836 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-29 14:22:59.503  INFO 11836 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-02-29 14:22:59.520  INFO 11836 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-02-29 14:30:22.496  INFO 40220 --- [main] c.w.p.m.service.MerchantsServiceTest     : Starting MerchantsServiceTest on DESKTOP-E3BV8JT with PID 40220 (started by root in D:\user\java_coupon\merchants)
+2020-02-29 14:30:22.498  INFO 40220 --- [main] c.w.p.m.service.MerchantsServiceTest     : No active profile set, falling back to default profiles: default
+2020-02-29 14:30:23.246  INFO 40220 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-29 14:30:23.370  INFO 40220 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 108ms. Found 1 JPA repository interfaces.
+2020-02-29 14:30:24.033  INFO 40220 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-29 14:30:24.279  INFO 40220 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-29 14:30:24.366  INFO 40220 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-02-29 14:30:24.483  INFO 40220 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.10.Final}
+2020-02-29 14:30:24.718  INFO 40220 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-29 14:30:25.366  INFO 40220 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2020-02-29 14:30:26.192  INFO 40220 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-29 14:30:26.203  INFO 40220 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-29 14:30:27.197  INFO 40220 --- [main] c.w.p.m.service.MerchantsServiceTest     : Started MerchantsServiceTest in 5.286 seconds (JVM running for 6.597)
+2020-02-29 14:30:27.501  INFO 40220 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [127.0.0.1:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = default
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2020-02-29 14:30:27.649  INFO 40220 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.3.1
+2020-02-29 14:30:27.650  INFO 40220 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 18a913733fb71c01
+2020-02-29 14:30:27.650  INFO 40220 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1582957827647
+2020-02-29 14:30:27.950  INFO 40220 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: 7mIcq9N7SdCMAIuPdUYf_Q
+2020-02-29 14:30:27.978  INFO 40220 --- [main] c.w.p.service.impl.MerchantsServiceImpl  : DropPassTemplates:{"background":2,"desc":"详情：22222","end":1585549827277,"id":22,"limit":10000,"start":1582957827277,"summary":"简介：11111","title":"title：优惠劵"}
+2020-02-29 14:30:27.997  INFO 40220 --- [SpringContextShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2020-02-29 14:30:28.028  INFO 40220 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-29 14:30:28.030  INFO 40220 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-02-29 14:30:28.034  INFO 40220 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -21,11 +21,6 @@ logging:
   # 输出级别
   level:
     root: info
-    org:
-      springframework:
-        boot:
-          autoconfigure:
-            logging=INFO:
   # 指定路径
   file:
     # 最大保存天数
@@ -33,4 +28,3 @@ logging:
     # 每个文件最大大小
     max-size: 200MB
     path: logs/web3nMerchants.log
-

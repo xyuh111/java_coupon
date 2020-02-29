@@ -32,7 +32,7 @@ public class MerchantsServiceTest{
      * {"data":{"id":20},"errorCode":0,"errorMas":""}
      */
     @Test
-//    @Transactional /** 添加事务 测试成功后，自动实现数据回滚，数据库的数据不会发生变化 */
+    @Transactional /** 添加事务 测试成功后，自动实现数据回滚，数据库的数据不会发生变化 */
     public void testCreatMerchantService(){
         CreateMerchantsRequest request = new CreateMerchantsRequest();
         request.setName("张斌3");
