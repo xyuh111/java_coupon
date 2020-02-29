@@ -1,6 +1,8 @@
 package com.web3n.passbook.security;
 
+import com.alibaba.fastjson.JSON;
 import com.web3n.passbook.constant.Constants;
+import com.web3n.passbook.vo.Response;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -21,8 +23,16 @@ public class AuthCheckInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest req, HttpServletResponse res, Object handler) throws Exception {
         String token = req.getHeader(Constants.TOKEN_STRING);
+        Response response = new Response();
+        res.setContentType("application/json;charset=utf-8");
+        res.setCharacterEncoding("utf-8");
         if(StringUtils.isEmpty(token)){
             throw new Exception("Header 中缺少 " + Constants.TOKEN_STRING + " ！");
+//            response.setErrorCode(-1);
+//            response.setErrorMas("Header 中缺少 " + Constants.TOKEN_STRING + " ！");
+//            String json = JSON.toJSONString(response);
+//            res.getWriter().println(json);
+//            return false;
         };
         if(!token.equals(Constants.TOKEN)){
             throw new Exception("Header 中 " + Constants.TOKEN_STRING + " 错误！");

@@ -81,7 +81,6 @@ public class MerchantsServiceImpl implements IMerchantsService {
             );
             log.info("DropPassTemplates:{}", passTemplate);
         }
-
         return response;
     }
 }
