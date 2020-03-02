@@ -1,0 +1,72 @@
+package com.web3n.passbook.service.impl;
+
+import com.spring4all.spring.boot.starter.hbase.api.HbaseTemplate;
+import com.web3n.passbook.constant.Constants;
+import com.web3n.passbook.service.IUserService;
+import com.web3n.passbook.vo.Response;
+import com.web3n.passbook.vo.User;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang.RandomStringUtils;
+import org.apache.hadoop.hbase.client.Mutation;
+import org.apache.hadoop.hbase.client.Put;
+import org.apache.hadoop.hbase.util.Bytes;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Created by macro on UserService.
+ * 创建用户访问数实现
+ **/
+@Slf4j
+@Service
+public class UserService implements IUserService {
+    /** HBase 客户端 */
+    @Autowired
+    private HbaseTemplate hbaseTemplate;
+    /** redis 客户端 */
+    @Autowired
+    private StringRedisTemplate redisTemplate;
+
+    @Override
+    public Response createUser(User user) throws Exception {
+        byte[] FAMILY_B = Constants.UserTable.FAMILY_B.getBytes();
+        byte[] NAME = Constants.UserTable.NAME.getBytes();
+        byte[] AGE = Constants.UserTable.AGE.getBytes();
+        byte[] SEX = Constants.UserTable.SEX.getBytes();
+
+        byte[] FAMILY_O = Constants.UserTable.FAMILY_O.getBytes();
+        byte[] PHONE = Constants.UserTable.PHONE.getBytes();
+        byte[] ADDRESS = Constants.UserTable.ADDRESS.getBytes();
+        /**  当前的用户总数 */
+        Long curCount = redisTemplate.opsForValue().increment(Constants.USE_COUNT_REDIS_KEY, 1);
+        Long userId = genUserId(curCount);
+        /** Mutation 是 put 的子类 */
+        List<Mutation> datas = new ArrayList<>();
+        Put put = new Put(Bytes.toBytes(userId));
+        put.addColumn(FAMILY_B, NAME, Bytes.toBytes(user.getBaseInfo().getName()));
+        put.addColumn(FAMILY_B, AGE, Bytes.toBytes(user.getBaseInfo().getAge()));
+        put.addColumn(FAMILY_B, AGE, Bytes.toBytes(user.getBaseInfo().getSex()));
+
+        put.addColumn(FAMILY_O, PHONE, Bytes.toBytes(user.getOtherInfo().getPhone()));
+        put.addColumn(FAMILY_O, ADDRESS, Bytes.toBytes(user.getOtherInfo().getAddress()));
+        datas.add(put);
+        hbaseTemplate.saveOrUpdates(Constants.UserTable.TABLE_NAME, datas);
+        user.setId(userId);
+        return new Response(user);
+    }
+
+    /**
+     * 生成 userId
+     * @param prefix 当前用户数
+     * @return 用户 id
+     */
+    private Long genUserId(Long prefix){
+        /** 五位的随机数 */
+        String suffix = RandomStringUtils.randomNumeric(5);
+        return Long.valueOf(prefix + suffix);
+    }
+}
