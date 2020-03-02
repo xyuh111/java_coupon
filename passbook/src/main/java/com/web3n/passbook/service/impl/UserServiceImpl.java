@@ -23,7 +23,7 @@ import java.util.List;
  **/
 @Slf4j
 @Service
-public class UserService implements IUserService {
+public class UserServiceImpl implements IUserService {
     /** HBase 客户端 */
     @Autowired
     private HbaseTemplate hbaseTemplate;
@@ -49,7 +49,7 @@ public class UserService implements IUserService {
         Put put = new Put(Bytes.toBytes(userId));
         put.addColumn(FAMILY_B, NAME, Bytes.toBytes(user.getBaseInfo().getName()));
         put.addColumn(FAMILY_B, AGE, Bytes.toBytes(user.getBaseInfo().getAge()));
-        put.addColumn(FAMILY_B, AGE, Bytes.toBytes(user.getBaseInfo().getSex()));
+        put.addColumn(FAMILY_B, SEX, Bytes.toBytes(user.getBaseInfo().getSex()));
 
         put.addColumn(FAMILY_O, PHONE, Bytes.toBytes(user.getOtherInfo().getPhone()));
         put.addColumn(FAMILY_O, ADDRESS, Bytes.toBytes(user.getOtherInfo().getAddress()));

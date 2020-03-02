@@ -7,7 +7,6 @@ import com.web3n.passbook.utils.RowKeyGenUtil;
 import com.web3n.passbook.vo.PassTemplate;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.time.DateFormatUtils;
-import org.apache.commons.lang.time.DateUtils;
 import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.client.Get;
 import org.apache.hadoop.hbase.client.Put;
@@ -15,15 +14,13 @@ import org.apache.hadoop.hbase.util.Bytes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
-
 /**
  * Created by macro on HBasePassService.
  * Pass HBase 服务
  **/
 @Slf4j
 @Service
-public class HBasePassService implements IHBasePassService {
+public class HBasePassServiceImpl implements IHBasePassService {
     /**
      * HBase 客户端
      */
