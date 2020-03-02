@@ -40,7 +40,7 @@ public class Constants {
         public static final String ADDRESS = "address";
     }
     /** PassTemplate HBase Table */
-    public class PassTemplate {
+    public class PassTemplateTable {
         /** PassTemplate HBase 表名 */
         public static final String TABLE_NAME = "pb:passtemplate";
         /** 基本信息列族 */
