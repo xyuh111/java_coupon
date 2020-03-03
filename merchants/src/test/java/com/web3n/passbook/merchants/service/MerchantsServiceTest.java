@@ -32,10 +32,10 @@ public class MerchantsServiceTest{
      * {"data":{"id":20},"errorCode":0,"errorMas":""}
      */
     @Test
-    @Transactional /** 添加事务 测试成功后，自动实现数据回滚，数据库的数据不会发生变化 */
+//    @Transactional /** 添加事务 测试成功后，自动实现数据回滚，数据库的数据不会发生变化 */
     public void testCreatMerchantService(){
         CreateMerchantsRequest request = new CreateMerchantsRequest();
-        request.setName("张斌3");
+        request.setName("张斌4");
         request.setLogoUrl("https://avatars1.githubusercontent.com/u/30693351?v=4");
         request.setPhone("123456789");
         request.setBusinessLicenseUrl("http://blog.web3n.com");
