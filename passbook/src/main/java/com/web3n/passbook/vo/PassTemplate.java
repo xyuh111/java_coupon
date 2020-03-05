@@ -1,9 +1,14 @@
 package com.web3n.passbook.vo;
 
+import com.web3n.passbook.constant.Constants;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.apache.commons.lang.time.DateUtils;
+import org.apache.hadoop.hbase.client.Result;
+import org.apache.hadoop.hbase.util.Bytes;
 
+import java.text.ParseException;
 import java.util.Date;
 
 /**
@@ -39,4 +44,35 @@ public class PassTemplate {
     
     /** 优惠劵结束时间 */
     private Date end;
+    /** Result 转  PassTemplate*/
+    public static PassTemplate toPassTemplate(Result result) throws ParseException {
+        byte[] FAMILY_B = Bytes.toBytes(Constants.PassTemplateTable.FAMILY_B);
+        byte[] ID = Bytes.toBytes(Constants.PassTemplateTable.ID);
+        byte[] TITLE = Bytes.toBytes(Constants.PassTemplateTable.TITLE);
+        byte[] SUMMARY = Bytes.toBytes(Constants.PassTemplateTable.SUMMARY);
+        byte[] DESC = Bytes.toBytes(Constants.PassTemplateTable.DESC);
+        byte[] HAS_TOKEN = Bytes.toBytes(Constants.PassTemplateTable.HAS_TOKEN);
+        byte[] BACKGROUND = Bytes.toBytes(Constants.PassTemplateTable.BACKGROUND);
+        
+        byte[] FAMILY_C = Bytes.toBytes(Constants.PassTemplateTable.FAMILY_C);
+        byte[] LIMIT = Bytes.toBytes(Constants.PassTemplateTable.LIMIT);
+        byte[] START = Bytes.toBytes(Constants.PassTemplateTable.START);
+        byte[] END = Bytes.toBytes(Constants.PassTemplateTable.END);
+        
+        PassTemplate passTemplate = new PassTemplate();
+        passTemplate.setId(Bytes.toInt(result.getValue(FAMILY_B, ID)));
+        passTemplate.setTitle(Bytes.toString(result.getValue(FAMILY_B, TITLE)));
+        passTemplate.setSummary(Bytes.toString(result.getValue(FAMILY_B, SUMMARY)));
+        passTemplate.setDesc(Bytes.toString(result.getValue(FAMILY_B, DESC)));
+        passTemplate.setHasToken(Bytes.toBoolean(result.getValue(FAMILY_B, HAS_TOKEN)));
+        passTemplate.setBackground(Bytes.toInt(result.getValue(FAMILY_B, BACKGROUND)));
+        
+        String[] patterns = new String[] {"yyyy-MM-dd"};
+        
+        passTemplate.setLimit(Bytes.toLong(result.getValue(FAMILY_C, LIMIT)));
+        passTemplate.setStart(DateUtils.parseDate(Bytes.toString(result.getValue(FAMILY_C, START)), patterns));
+        passTemplate.setEnd(DateUtils.parseDate(Bytes.toString(result.getValue(FAMILY_C, END)), patterns));
+        return passTemplate;
+    }
+    
 }
