@@ -2,16 +2,23 @@ package com.web3n.passbook.service.impl;
 
 import com.spring4all.spring.boot.starter.hbase.api.HbaseTemplate;
 import com.web3n.passbook.constant.Constants;
+import com.web3n.passbook.constant.PassStatus;
 import com.web3n.passbook.dao.MerchantsDao;
 import com.web3n.passbook.entity.Merchants;
+import com.web3n.passbook.mapper.PassRowMapper;
 import com.web3n.passbook.service.IUserPassService;
 import com.web3n.passbook.vo.Pass;
+import com.web3n.passbook.vo.PassInfo;
 import com.web3n.passbook.vo.PassTemplate;
 import com.web3n.passbook.vo.Response;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.client.Get;
 import org.apache.hadoop.hbase.client.Result;
+import org.apache.hadoop.hbase.client.Scan;
+import org.apache.hadoop.hbase.filter.CompareFilter;
+import org.apache.hadoop.hbase.filter.PrefixFilter;
+import org.apache.hadoop.hbase.filter.SingleColumnValueFilter;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,7 +43,7 @@ public class UserPassServiceImpl implements IUserPassService {
     
     /** MerchantsDao */
     @Autowired
-    private MerchantsDao merchantsDao
+    private MerchantsDao merchantsDao;
     
     @Override
     public Response getUserPassInfo(Long userId) throws Exception {
@@ -57,6 +64,48 @@ public class UserPassServiceImpl implements IUserPassService {
     public Response userUsePass(Pass pass) {
         return null;
     }
+    
+    /**
+     * 根据优惠卷状态获取优惠券信息
+     * @param userId 用户 di
+     * @param status  {@link PassStatus}
+     * @return {@link Response}
+     */
+    private Response getPassInfoByStatus(Long userId, PassStatus status) throws Exception{
+        /** 根据 userId 构造行键前缀 */
+        byte[] rowPrefix = Bytes.toBytes(new StringBuffer(String.valueOf(userId)).reverse().toString());
+        CompareFilter.CompareOp compareOp = status == PassStatus.UNUSED ?
+                CompareFilter.CompareOp.EQUAL : CompareFilter.CompareOp.NO_OP;
+        Scan scan = new Scan();
+        /** 1. 行键前缀过滤器，找到特定用户的优惠券 */
+        scan.setFilter(new PrefixFilter(rowPrefix));
+        /** 2. 基于列单元值过滤器，找到未使用的优惠券 */
+        if(status != PassStatus.ALL){
+            scan.setFilter(new SingleColumnValueFilter(Constants.PassTable.FAMILY_I.getBytes(),
+                    Constants.PassTable.CON_DATE.getBytes(),
+                    compareOp, Bytes.toBytes("-1")));
+        }
+        
+        List<Pass> passes = hbaseTemplate.find(Constants.PassTable.TABLE_NAME, scan, new PassRowMapper());
+        Map<String, PassTemplate> passTemplateMap = buildPassTemplateMap(passes);
+        Map<Integer, Merchants> merchantsMap = buildMerchantsMap(new ArrayList<>(passTemplateMap.values()));
+        
+        List<PassInfo> result = new ArrayList<>();
+        for (Pass pass : passes) {
+            PassTemplate passTemplate = passTemplateMap.getOrDefault(pass.getTemplateId(), null);
+            if(null == passTemplate){
+                log.error("PassTemplate Null : {}", pass.getTemplateId());
+                continue;
+            }
+            Merchants merchants = merchantsMap.getOrDefault(passTemplate.getId(), null);
+            if(null == merchants){
+                log.error("Merchants Null : {}", passTemplate.getId());
+                continue;
+            }
+            result.add(new PassInfo(pass, passTemplate, merchants));
+        }
+        return new Response(result);
+    };
     
     /**
      * 通过获取的 Pass 对象构造 Map
