@@ -1,7 +1,5 @@
 package com.web3n.passbook.constant;
 
-import org.apache.kafka.common.protocol.types.Field;
-
 /**
  * Created by macro on Constants.
  * 常量定义
@@ -11,7 +9,7 @@ public class Constants {
     public static final String TEMPLATE_TOPIC = "merchants-template";
 
     /** token 文件存储目录 */
-    public static final String TOKEN_DIP = "/tmp/token/";
+    public static final String TOKEN_DIR = "/d/user/java_coupon/tmp/token/";
 
     /** 已使用的 token 文件名后缀 */
     public static final String USED_TOKEN_SUFFIX = "_";
