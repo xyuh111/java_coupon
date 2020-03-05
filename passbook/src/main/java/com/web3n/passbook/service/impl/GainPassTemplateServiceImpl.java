@@ -1,10 +1,13 @@
 package com.web3n.passbook.service.impl;
 
+import com.alibaba.fastjson.JSON;
 import com.spring4all.spring.boot.starter.hbase.api.HbaseTemplate;
 import com.web3n.passbook.constant.Constants;
+import com.web3n.passbook.mapper.PassTemplateRowMapper;
 import com.web3n.passbook.service.IGainPassTemplateService;
 import com.web3n.passbook.utils.RowKeyGenUtil;
 import com.web3n.passbook.vo.GainPassTemplateRequest;
+import com.web3n.passbook.vo.PassTemplate;
 import com.web3n.passbook.vo.Response;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.time.DateFormatUtils;
@@ -41,7 +44,47 @@ public class GainPassTemplateServiceImpl implements IGainPassTemplateService {
     
     @Override
     public Response gainPassTemplate(GainPassTemplateRequest request) throws Exception {
-        return null;
+        PassTemplate passTemplate;
+        String passTemplateId = RowKeyGenUtil.genPassTemplateRowKey(request.getPassTemplate());
+        /** 判断 HBase 是否有这张优惠券信息，避免有人刷优惠券 */
+        try {
+            passTemplate = hbaseTemplate.get(
+                    Constants.PassTemplateTable.TABLE_NAME,
+                    passTemplateId,
+                    new PassTemplateRowMapper()
+            );
+        } catch (Exception e){
+            log.error("Gain PassTemplate Error : {}", JSON.toJSONString(request.getPassTemplate()));
+            return Response.failure("Gain PassTemplate Error");
+        }
+        /** 判断当前的优惠券是否可领取 */
+        /** 优惠券是否有可领取数量 */
+        if(passTemplate.getLimit() <= 1 && passTemplate.getLimit() != -1){
+            log.error("PassTemplate Limit Max : {}", JSON.toJSONString(request.getPassTemplate()));
+            return Response.failure("PassTemplate Limit Max");
+        }
+        /** 判断优惠券是否在可领取的时间范围内 */
+        Date cur = new Date();
+        if(!(cur.getTime() >= passTemplate.getStart().getTime() && cur.getTime() < passTemplate.getEnd().getTime())){
+            log.error("PassTemplate ValidTime Error : {}", JSON.toJSONString(request.getPassTemplate()));
+            return Response.failure("PassTemplate ValidTime Error! ");
+        }
+        /** 减去优惠券的 limit */
+        if(passTemplate.getLimit() != -1){
+            List<Mutation> datas = new ArrayList<>();
+            byte[] FAMILY_C = Constants.PassTemplateTable.FAMILY_C.getBytes();
+            byte[] LIMIT = Constants.PassTemplateTable.LIMIT.getBytes();
+            Put put = new Put(Bytes.toBytes(passTemplateId));
+            put.addColumn(FAMILY_C, LIMIT, Bytes.toBytes(passTemplate.getLimit() -1));
+            datas.add(put);
+            
+            hbaseTemplate.saveOrUpdates(Constants.PassTemplateTable.TABLE_NAME, datas);
+        }
+        /** 将优惠券保存到用户优惠券表 */
+        if(!addPassForUser(request, passTemplate.getId(), passTemplateId)){
+            return Response.failure("GainPassTemplate Failure!");
+        }
+        return Response.success();
     }
     
     /**
