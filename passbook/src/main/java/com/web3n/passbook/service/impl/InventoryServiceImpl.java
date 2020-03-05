@@ -16,7 +16,6 @@ import org.apache.hadoop.hbase.filter.FilterList;
 import org.apache.hadoop.hbase.filter.LongComparator;
 import org.apache.hadoop.hbase.filter.SingleColumnValueFilter;
 import org.apache.hadoop.hbase.util.Bytes;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -31,14 +30,17 @@ import java.util.stream.Collectors;
 public class InventoryServiceImpl implements IInventoryService {
     
     /** HBase 客户端 */
-    @Autowired
-    private HbaseTemplate hbaseTemplate;
+    private final HbaseTemplate hbaseTemplate;
     /** MerchantsDao 接口 */
-    @Autowired
-    private MerchantsDao merchantsDao;
+    private final MerchantsDao merchantsDao;
     
-    @Autowired
-    private IUserPassService userPassService;
+    private final IUserPassService userPassService;
+    
+    public InventoryServiceImpl(HbaseTemplate hbaseTemplate, MerchantsDao merchantsDao, IUserPassService userPassService) {
+        this.hbaseTemplate = hbaseTemplate;
+        this.merchantsDao = merchantsDao;
+        this.userPassService = userPassService;
+    }
     
     @Override
     @SuppressWarnings("unchecked") /** 把强转警告注释 (List<PassInfo>) */

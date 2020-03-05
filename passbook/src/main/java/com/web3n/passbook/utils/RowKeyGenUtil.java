@@ -30,7 +30,7 @@ public class RowKeyGenUtil {
      * @param request {@link GainPassTemplateRequest}
      * @return String RowKey
      */
-    public static String fenPassRowKey(GainPassTemplateRequest request){
+    public static String GenPassRowKey(GainPassTemplateRequest request){
         return new StringBuilder(String.valueOf(request.getUserId())).reverse().toString()
                 + (Long.MAX_VALUE - System.currentTimeMillis())
                 + genPassTemplateRowKey(request.getPassTemplate());

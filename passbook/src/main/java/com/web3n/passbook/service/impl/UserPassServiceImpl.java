@@ -18,7 +18,6 @@ import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.client.*;
 import org.apache.hadoop.hbase.filter.*;
 import org.apache.hadoop.hbase.util.Bytes;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -33,12 +32,15 @@ import java.util.stream.Collectors;
 public class UserPassServiceImpl implements IUserPassService {
     
     /** HBase 客户端 */
-    @Autowired
-    private HbaseTemplate hbaseTemplate;
+    private final HbaseTemplate hbaseTemplate;
     
     /** MerchantsDao */
-    @Autowired
-    private MerchantsDao merchantsDao;
+    private final MerchantsDao merchantsDao;
+    
+    public UserPassServiceImpl(HbaseTemplate hbaseTemplate, MerchantsDao merchantsDao) {
+        this.hbaseTemplate = hbaseTemplate;
+        this.merchantsDao = merchantsDao;
+    }
     
     @Override
     public Response getUserPassInfo(Long userId) throws Exception {

@@ -10,7 +10,6 @@ import org.apache.commons.lang.RandomStringUtils;
 import org.apache.hadoop.hbase.client.Mutation;
 import org.apache.hadoop.hbase.client.Put;
 import org.apache.hadoop.hbase.util.Bytes;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
@@ -25,12 +24,15 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements IUserService {
     /** HBase 客户端 */
-    @Autowired
-    private HbaseTemplate hbaseTemplate;
+    private final HbaseTemplate hbaseTemplate;
     /** redis 客户端 */
-    @Autowired
-    private StringRedisTemplate redisTemplate;
-
+    private final StringRedisTemplate redisTemplate;
+    
+    public UserServiceImpl(HbaseTemplate hbaseTemplate, StringRedisTemplate redisTemplate) {
+        this.hbaseTemplate = hbaseTemplate;
+        this.redisTemplate = redisTemplate;
+    }
+    
     @Override
     public Response createUser(User user) throws Exception {
         byte[] FAMILY_B = Constants.UserTable.FAMILY_B.getBytes();
