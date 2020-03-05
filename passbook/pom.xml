@@ -59,6 +59,7 @@
 <!--            <version>1.4.7.RELEASE</version>-->
         </dependency>
         <!-- hBash -->
+        <!-- https://mvnrepository.com/artifact/com.spring4all/spring-boot-starter-hbase -->
         <dependency>
             <groupId>com.spring4all</groupId>
             <artifactId>spring-boot-starter-hbase</artifactId>
@@ -83,6 +84,7 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
+            <version>3.9</version>
         </dependency>
         <!-- kafka -->
         <dependency>

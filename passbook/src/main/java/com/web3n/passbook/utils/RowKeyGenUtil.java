@@ -1,15 +1,16 @@
 package com.web3n.passbook.utils;
 
 import com.web3n.passbook.vo.Feedback;
+import com.web3n.passbook.vo.GainPassTemplateRequest;
 import com.web3n.passbook.vo.PassTemplate;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.codec.digest.DigestUtils;
-
-import static org.apache.kafka.common.requests.FetchMetadata.log;
 
 /**
  * Created by macro on RowKeyGenUtil.
  * RowKey 生成器工具类
  **/
+@Slf4j
 public class RowKeyGenUtil {
     /**
      * 根据提供的 PassTemplate 对象生成 RowKey
@@ -22,6 +23,18 @@ public class RowKeyGenUtil {
         log.info("GenPassTemplateRowKey:{},{}", passInfo, rowKey);
         return rowKey;
     }
+    
+    /**
+     * 根据提供的领取优惠券请求生成 RowKey，只可以在领取优惠券的时候使用
+     * Pass RowKey = reversed(userId) + inverse(timestamp) + PassTemplate RowKey
+     * @param request {@link GainPassTemplateRequest}
+     * @return String RowKey
+     */
+    public static String fenPassRowKey(GainPassTemplateRequest request){
+        return new StringBuilder(String.valueOf(request.getUserId())).reverse().toString()
+                + (Long.MAX_VALUE - System.currentTimeMillis())
+                + genPassTemplateRowKey(request.getPassTemplate());
+    };
 
     /**
      * 根据 Feedback 构造 RowKey
@@ -31,5 +44,4 @@ public class RowKeyGenUtil {
     public static String genFeedbackRowKey(Feedback feedback){
         return new StringBuilder(String.valueOf(feedback.getUserId())).reverse().toString() + (Long.MAX_VALUE - System.currentTimeMillis());
     };
-
 }
