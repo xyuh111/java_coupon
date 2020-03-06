@@ -11,6 +11,7 @@ import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.client.Get;
 import org.apache.hadoop.hbase.client.Put;
 import org.apache.hadoop.hbase.util.Bytes;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -25,6 +26,7 @@ public class HBasePassServiceImpl implements IHBasePassService {
      */
     private final HbaseTemplate hbaseTemplate;
     
+    @Autowired
     public HBasePassServiceImpl(HbaseTemplate hbaseTemplate) {
         this.hbaseTemplate = hbaseTemplate;
     }

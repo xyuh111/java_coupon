@@ -18,6 +18,7 @@ import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.client.*;
 import org.apache.hadoop.hbase.filter.*;
 import org.apache.hadoop.hbase.util.Bytes;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -37,6 +38,7 @@ public class UserPassServiceImpl implements IUserPassService {
     /** MerchantsDao */
     private final MerchantsDao merchantsDao;
     
+    @Autowired
     public UserPassServiceImpl(HbaseTemplate hbaseTemplate, MerchantsDao merchantsDao) {
         this.hbaseTemplate = hbaseTemplate;
         this.merchantsDao = merchantsDao;
@@ -158,7 +160,7 @@ public class UserPassServiceImpl implements IUserPassService {
                 .getTable(TableName.valueOf(Constants.PassTemplateTable.TABLE_NAME))
                 .get(templateGets);
         
-        // 构造 PassTemplate  ->  PassTemplate Object 的 Map， 用于构造 PassInfo
+        /** 构造 PassTemplate  ->  PassTemplate Object 的 Map， 用于构造 PassInfo  */
         Map<String, PassTemplate> templateId2Object = new HashMap<>();
         for (Result item : templateResults) {
             PassTemplate  passTemplate = PassTemplate.toPassTemplate(item);

@@ -10,6 +10,7 @@ import org.apache.commons.lang.RandomStringUtils;
 import org.apache.hadoop.hbase.client.Mutation;
 import org.apache.hadoop.hbase.client.Put;
 import org.apache.hadoop.hbase.util.Bytes;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
@@ -28,6 +29,7 @@ public class UserServiceImpl implements IUserService {
     /** redis 客户端 */
     private final StringRedisTemplate redisTemplate;
     
+    @Autowired
     public UserServiceImpl(HbaseTemplate hbaseTemplate, StringRedisTemplate redisTemplate) {
         this.hbaseTemplate = hbaseTemplate;
         this.redisTemplate = redisTemplate;

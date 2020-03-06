@@ -6,13 +6,11 @@ import com.web3n.passbook.vo.CreateMerchantsRequest;
 
 
 import com.web3n.passbook.vo.PassTemplate;
-import com.web3n.passbook.vo.Response;
 import org.apache.commons.lang.time.DateUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.Date;
